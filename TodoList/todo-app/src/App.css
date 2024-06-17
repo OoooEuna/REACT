@@ -1,0 +1,177 @@
+.container {
+  margin: 100px auto;
+  width: 500px;
+  min-height: 600px;
+  border: 5px solid rgba(175, 199, 235, 0.575);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  background-color: aliceblue;
+}
+
+.header {
+  text-align: center;
+  font-size: 20px;
+  /* color: lightsteelblue; */
+  color:rgb(137, 203, 224);
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0px 10px 0;
+}
+
+.input {
+  width: 80%;
+  height: 30px;
+  background-color: transparent;
+}
+
+.form .input {
+  border: none;
+  border-bottom: 1px solid rgb(137, 203, 224);
+  padding-left: 12px;
+  font-size: 18px;
+  outline: none;
+  color: lightsteelblue;
+}
+
+.form .btn {
+  width: 15%;
+}
+
+.input::placeholder {
+  color:lightsteelblue;
+}
+
+.btn{
+  width: 80px;
+  height: 40px;
+  padding: 0 10px;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  background-color: rgb(137, 203, 224);
+  color: snow;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgb(137, 203, 224);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active { box-shadow: none; }
+
+.todoList {
+  height: 500px;
+  overflow-y: auto;
+}
+
+ul { margin: 0; padding: 0; }
+
+.todoItem {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin: 10px 10px 10px 0;
+  border: 2px solid rgba(110, 166, 212, 0.719);
+  border-radius: 12px;
+  color: lightsteelblue;
+  font-size: 18px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+
+/* 스크롤바 */
+::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar
+{
+  width: 10px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  background-image: -webkit-gradient(linear,
+                     left bottom,
+                     left top,
+                     color-stop(0.44, rgba(122, 154, 217, 0.384)),
+                     color-stop(0.72, rgba(17, 97, 194, 0.712)),
+                     color-stop(0.86, rgb(147, 163, 209)));
+}
+
+/* 체크박스 */
+.todoItem input {
+  display: none;
+}
+
+.todoItem label {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border: 3px dashed rgba(110, 166, 212, 0.719);
+  border-radius: 50%;
+}
+
+.todoItem input:checked ~ label {
+  background-color: rgba(110, 166, 212, 0.719);
+  border: 3px solid rgba(86, 121, 150, 0.719);
+}
+
+.todoItem input:checked ~ span {
+  text-decoration: line-through;
+}
+
+.todoItem .item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* 배경 */
+ body {
+   background: linear-gradient(
+      -45deg,
+      #ffffff,
+      #ffe4e9,
+      #fcc8e2,
+      #f6baed,
+      #efb0ff,
+      #d3a2ff,
+      #8eb8ff,
+      #91efff,
+      #d5f9ff
+   );
+   background-size: 400% 400%;
+   animation: gradient 9s ease infinite;
+   height: 100vh;
+}
+
+@keyframes gradient {
+   0% {
+      background-position: 0% 50%;
+   }
+   50% {
+      background-position: 100% 50%;
+   }
+   100% {
+      background-position: 0% 50%;
+   }
+}
