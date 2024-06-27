@@ -1,0 +1,28 @@
+/* Orbit 폰트 import */
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Jua&family=Orbit&display=swap');
+
+/* 📃 index.css */
+/* CSS 공통 초기화 작업 (전체화면) */
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+body {
+  font-family: 'Orbit', sans-serif;
+  font-size: var(--font-size-main);
+}
+/* ul {list-style-type: none;} */
+a {text-decoration: none; color: black; font-weight: normal;}
+a:hover:not(.btn) {text-decoration: underline;}
+img {width: 100%;}
+button {cursor: pointer;}
+hr {margin-bottom: 10px;}
+
+/* ⭐ CSS 변수 설정 */
+:root {
+  --font-size-main: 20px;
+  --main-color: #0066ff;
+  --sub-color: lightblue;
+}
